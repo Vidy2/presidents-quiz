@@ -29,7 +29,7 @@
         }
         section {
             padding: 2rem;
-            border-bottom: 1px solid #ddd;
+            border-bottom: 0px solid #ddd;
         }
         footer {
             text-align: center;
@@ -40,12 +40,80 @@
         a, a:visited, a:hover, a:active {
             color: #007BFF;
         }
+        .circle-container {
+            position: relative;
+            height: 500px; /* Or 100vh for full page */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            }
+
+            .orbit {
+            position: absolute;
+            width: 50px;
+            /* (360 / 45) = 8deg. We offset each image by its index. */
+            transform: rotate(calc(var(--i) * 8deg)) translateX(200px);
+            animation: orbit-rotate 20s linear infinite;
+            }
+
+            @keyframes orbit-rotate {
+            from { transform: rotate(calc(var(--i) * 8deg)) translateX(200px) rotate(0deg); }
+            to { transform: rotate(calc(var(--i) * 8deg + 360deg)) translateX(200px) rotate(-360deg); }
+            }
     </style>
 </head>
-<body style ="background-image:url('https://t4.ftcdn.net/jpg/00/92/47/85/360_F_92478590_BbuqPZQDFPOOjIbhQajB3oq2z5cfsVZt.jpg');background-size:cover;background-repeat:no-repeat;display:flow-root;">
-    
+<body style ="background-image:url('https://t4.ftcdn.net/jpg/00/92/47/85/360_F_92478590_BbuqPZQDFPOOjIbhQajB3oq2z5cfsVZt.jpg');background-size:cover;background-repeat:no-repeat;display:flow-root;text-decoration:none;">
+    <div class="circle-container">
+        <!-- Generate 45 of these -->
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwsaZxuAgWICW7j4amn6I1UFIj0d8KKuxKtg&s" class="orbit" style="--i: 1">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiHjaSc8X7fBvmDYPpRxdCaMy4cXwQfJuJSg&s" class="orbit" style="--i: 2">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/07/Official_Presidential_portrait_of_Thomas_Jefferson_%28by_Rembrandt_Peale%2C_1800%29.jpg" class="orbit" style="--i: 3">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/1d/James_Madison.jpg" class="orbit" style="--i: 4">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d4/James_Monroe_White_House_portrait_1819.jpg" class="orbit" style="--i: 5">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/JQA_Photo_Crop_%28cropped%29.jpg/960px-JQA_Photo_Crop_%28cropped%29.jpg" class="orbit" style="--i: 6">
+        <img src="https://d1y822qhq55g6.cloudfront.net/default/_superImage/Andrew-Jackson.jpg" class="orbit" style="--i: 7">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/72/Martin_Van_Buren_by_Mathew_Brady_c1855-58-%284%29.jpg" class="orbit" style="--i: 8">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2c/William_Henry_Harrison_crop.jpg" class="orbit" style="--i: 9">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/John_Tyler_%28cropped_3x4%29.png" class="orbit" style="--i: 10">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Polk_crop.jpg" class="orbit" style="--i: 11">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b4/Zachary_Taylor_restored_and_cropped_%283.5x4.5_cropped%29.jpg" class="orbit" style="--i: 12">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Fillmore.jpg" class="orbit" style="--i: 13">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Franklin_Pierce_-_1852.jpg/250px-Franklin_Pierce_-_1852.jpg" class="orbit" style="--i: 14">
+        <img src="" class="orbit" style="--i: 15">
+        <img src="" class="orbit" style="--i: 16">
+        <img src="" class="orbit" style="--i: 17">
+        <img src="" class="orbit" style="--i: 18">
+        <img src="" class="orbit" style="--i: 19">
+        <img src="" class="orbit" style="--i: 20">
+        <img src="" class="orbit" style="--i: 21">
+        <img src="" class="orbit" style="--i: 22">
+        <img src="" class="orbit" style="--i: 23">
+        <img src="" class="orbit" style="--i: 24">
+        <img src="" class="orbit" style="--i: 25">
+        <img src="" class="orbit" style="--i: 26">
+        <img src="" class="orbit" style="--i: 27">
+        <img src="" class="orbit" style="--i: 28">
+        <img src="" class="orbit" style="--i: 29">
+        <img src="" class="orbit" style="--i: 30">
+        <img src="" class="orbit" style="--i: 31">
+        <img src="" class="orbit" style="--i: 32">
+        <img src="" class="orbit" style="--i: 33">
+        <img src="" class="orbit" style="--i: 34">
+        <img src="" class="orbit" style="--i: 35">
+        <img src="" class="orbit" style="--i: 36">
+        <img src="" class="orbit" style="--i: 37">
+        <img src="" class="orbit" style="--i: 38">
+        <img src="" class="orbit" style="--i: 39">
+        <img src="" class="orbit" style="--i: 40">
+        <img src="" class="orbit" style="--i: 41">
+        <img src="" class="orbit" style="--i: 42">
+        <img src="" class="orbit" style="--i: 43">
+        <img src="" class="orbit" style="--i: 44">
+        <img src="" class="orbit" style="--i: 45">
+        
+    </div>  
     <section id="project">
-        <h2 style="font-size: 40px; text-align: center;">Projects</h2>
+        <h2 style="font-size: 40px; text-align: center;">Quizzes</h2>
         <ul style="list-style-type: none; padding: 0;">
             <li style="font-size: 24px; text-align: center;">List all the presidents: <a href="https://codehs.com/sandbox/id/presidents-quiz-F7qDEw/run" style="font-size: 24px; text-align: center;" target="_blank">Presidents Quiz</a></li>
         </ul>
