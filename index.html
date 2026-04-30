@@ -44,8 +44,8 @@
             position: absolute;
             top: 0;
             left: 0;
-            width: 100vw;
-            height: 100vh;
+            width: 200vw;
+            height: 125vh;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -56,16 +56,16 @@
             position: absolute;
             width: 50px;
             animation: orbit-square 20s linear infinite;
-            animation-delay: calc(var(--i) * 20s / 44);
+            animation-delay: calc(var(--i) * -20s / 44);
             pointer-events: auto;
             }
 
             @keyframes orbit-square {
-            0% { transform: translateX(0px) translateY(-300px); }
-            25% { transform: translateX(300px) translateY(-300px); }
-            50% { transform: translateX(300px) translateY(300px); }
-            75% { transform: translateX(-300px) translateY(300px); }
-            100% { transform: translateX(-300px) translateY(-300px); }
+            0% { transform: translateX(0px) translateY(-400px); }
+            25% { transform: translateX(400px) translateY(-400px); }
+            50% { transform: translateX(400px) translateY(400px); }
+            75% { transform: translateX(-400px) translateY(400px); }
+            100% { transform: translateX(-400px) translateY(-400px); }
             }
     </style>
 </head>
