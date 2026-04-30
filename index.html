@@ -42,10 +42,10 @@
         }
         .square-container {
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 200vw;
-            height: 125vh;
+            top: 50%;
+            left: 50%;
+            width: 100vw;
+            height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -61,11 +61,11 @@
             }
 
             @keyframes orbit-square {
-            0% { transform: translateX(0px) translateY(-400px); }
-            25% { transform: translateX(400px) translateY(-400px); }
-            50% { transform: translateX(400px) translateY(400px); }
-            75% { transform: translateX(-400px) translateY(400px); }
-            100% { transform: translateX(-400px) translateY(-400px); }
+                0%   { transform: translate(-50%, -50%) translateX(0) translateY(calc(-1 * (min(50vw, 50vh) - 50px))); }
+                25%  { transform: translate(-50%, -50%) translateX(calc(min(50vw, 50vh) - 50px)) translateY(calc(-1 * (min(50vw, 50vh) - 50px))); }
+                50%  { transform: translate(-50%, -50%) translateX(calc(min(50vw, 50vh) - 50px)) translateY(calc(min(50vw, 50vh) - 50px)); }
+                75%  { transform: translate(-50%, -50%) translateX(calc(-1 * (min(50vw, 50vh) - 50px))) translateY(calc(min(50vw, 50vh) - 50px)); }
+                100% { transform: translate(-50%, -50%) translateX(calc(-1 * (min(50vw, 50vh) - 50px))) translateY(calc(-1 * (min(50vw, 50vh) - 50px))); }
             }
     </style>
 </head>
