@@ -42,7 +42,7 @@
         }
         .circle-container {
             position: relative;
-            height: 500px; /* Or 100vh for full page */
+            height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -51,7 +51,6 @@
             .orbit {
             position: absolute;
             width: 50px;
-            /* (360 / 45) = 8deg. We offset each image by its index. */
             transform: rotate(calc(var(--i) * 8deg)) translateX(200px);
             animation: orbit-rotate 20s linear infinite;
             }
@@ -64,7 +63,6 @@
 </head>
 <body style ="background-image:url('https://t4.ftcdn.net/jpg/00/92/47/85/360_F_92478590_BbuqPZQDFPOOjIbhQajB3oq2z5cfsVZt.jpg');background-size:cover;background-repeat:no-repeat;display:flow-root;text-decoration:none;">
     <div class="circle-container">
-        <!-- Generate 45 of these -->
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwsaZxuAgWICW7j4amn6I1UFIj0d8KKuxKtg&s" class="orbit" style="--i: 1">
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiHjaSc8X7fBvmDYPpRxdCaMy4cXwQfJuJSg&s" class="orbit" style="--i: 2">
         <img src="https://upload.wikimedia.org/wikipedia/commons/0/07/Official_Presidential_portrait_of_Thomas_Jefferson_%28by_Rembrandt_Peale%2C_1800%29.jpg" class="orbit" style="--i: 3">
@@ -79,37 +77,36 @@
         <img src="https://upload.wikimedia.org/wikipedia/commons/b/b4/Zachary_Taylor_restored_and_cropped_%283.5x4.5_cropped%29.jpg" class="orbit" style="--i: 12">
         <img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Fillmore.jpg" class="orbit" style="--i: 13">
         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Franklin_Pierce_-_1852.jpg/250px-Franklin_Pierce_-_1852.jpg" class="orbit" style="--i: 14">
-        <img src="" class="orbit" style="--i: 15">
-        <img src="" class="orbit" style="--i: 16">
-        <img src="" class="orbit" style="--i: 17">
-        <img src="" class="orbit" style="--i: 18">
-        <img src="" class="orbit" style="--i: 19">
-        <img src="" class="orbit" style="--i: 20">
-        <img src="" class="orbit" style="--i: 21">
-        <img src="" class="orbit" style="--i: 22">
-        <img src="" class="orbit" style="--i: 23">
-        <img src="" class="orbit" style="--i: 24">
-        <img src="" class="orbit" style="--i: 25">
-        <img src="" class="orbit" style="--i: 26">
-        <img src="" class="orbit" style="--i: 27">
-        <img src="" class="orbit" style="--i: 28">
-        <img src="" class="orbit" style="--i: 29">
-        <img src="" class="orbit" style="--i: 30">
-        <img src="" class="orbit" style="--i: 31">
-        <img src="" class="orbit" style="--i: 32">
-        <img src="" class="orbit" style="--i: 33">
-        <img src="" class="orbit" style="--i: 34">
-        <img src="" class="orbit" style="--i: 35">
-        <img src="" class="orbit" style="--i: 36">
-        <img src="" class="orbit" style="--i: 37">
-        <img src="" class="orbit" style="--i: 38">
-        <img src="" class="orbit" style="--i: 39">
-        <img src="" class="orbit" style="--i: 40">
-        <img src="" class="orbit" style="--i: 41">
-        <img src="" class="orbit" style="--i: 42">
-        <img src="" class="orbit" style="--i: 43">
-        <img src="" class="orbit" style="--i: 44">
-        <img src="" class="orbit" style="--i: 45">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/James_Buchanan.jpg/250px-James_Buchanan.jpg" class="orbit" style="--i: 15">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUcyQYaIcPD2Gez-CGQCBOdpUO6u4uM09cJQ&s" class="orbit" style="--i: 16">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e6/Andrew_Johnson_photo_portrait_head_and_shoulders%2C_c1870-1880-Edit1.jpg" class="orbit" style="--i: 17">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRdIhllgPXlsnIj1V0DRV-W4YyMSQpuazcQg&s" class="orbit" style="--i: 18">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/50/President_Rutherford_Hayes_1870_-_1880_Restored.jpg" class="orbit" style="--i: 19">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/1f/James_Abram_Garfield%2C_photo_portrait_seated.jpg" class="orbit" style="--i: 20">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHCKiAqJ5tMdCks18MFeVa8aAMnXbOevBqiA&s" class="orbit" style="--i: 21">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/36/StephenGroverCleveland.jpg" class="orbit" style="--i: 22">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Pach_Brothers_-_Benjamin_Harrison_%28cropped%29_%28cropped%29.jpg/960px-Pach_Brothers_-_Benjamin_Harrison_%28cropped%29_%28cropped%29.jpg" class="orbit" style="--i: 23">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/30/McKinley_%28cropped%29.jpg" class="orbit" style="--i: 24">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/7d/Theodore_Roosevelt_by_the_Pach_Bros_%284x5_cropped%29.jpg" class="orbit" style="--i: 25">
+        <img src="https://cdn.britannica.com/60/71460-050-152A6481/William-Howard-Taft-constitutional-law-Kent-Yale-1921.jpg" class="orbit" style="--i: 26">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1F-AJEDyt_qjU7MM3H7tPVrXjunCMbTfRzQ&s" class="orbit" style="--i: 27">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Warren_G._Harding_1920s_portrait_%283x4_cropped%29.jpg" class="orbit" style="--i: 28">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/49/President_Calvin_Coolidge%2C_1924_portrait_photograph_%283x4_cropped%29.jpeg" class="orbit" style="--i: 29">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/President_Hoover_portrait.jpg/960px-President_Hoover_portrait.jpg" class="orbit" style="--i: 30">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/f/fd/FDR-1944-Campaign-Portrait_%283x4_retouched%2C_cropped%29.jpg" class="orbit" style="--i: 31">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/TRUMAN_58-766-06_%28cropped%29.jpg" class="orbit" style="--i: 32">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Dwight_D._Eisenhower%2C_official_photo_portrait%2C_May_29%2C_1959_%28cropped%29%283%29.jpg/250px-Dwight_D._Eisenhower%2C_official_photo_portrait%2C_May_29%2C_1959_%28cropped%29%283%29.jpg" class="orbit" style="--i: 33">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/John_F._Kennedy%2C_White_House_color_photo_portrait.jpg/250px-John_F._Kennedy%2C_White_House_color_photo_portrait.jpg" class="orbit" style="--i: 34">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/54/Lyndon_B._Johnson%2C_photo_portrait%2C_color_%283x4_cropped%29%282%29.jpg" class="orbit" style="--i: 35">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Richard_Nixon_presidential_portrait_%281%29.jpg/250px-Richard_Nixon_presidential_portrait_%281%29.jpg" class="orbit" style="--i: 36">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/36/Gerald_Ford_presidential_portrait_%28cropped%29.jpg" class="orbit" style="--i: 37">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/Jimmy_Carter_Official_Portrait2_%283x4_cropped%29.jpg" class="orbit" style="--i: 38">
+        <img src="https://m.media-amazon.com/images/I/41TxVjkebVL._AC_UF894,1000_QL80_.jpg" class="orbit" style="--i: 39">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d3/Bill_Clinton.jpg" class="orbit" style="--i: 40">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/George-W-Bush.jpeg/960px-George-W-Bush.jpeg" class="orbit" style="--i: 41">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/President_Barack_Obama%2C_2012_portrait_crop.jpg/960px-President_Barack_Obama%2C_2012_portrait_crop.jpg" class="orbit" style="--i: 42">
+        <img src="https://bookstore.gpo.gov/sites/default/files/styles/product_page_image/public/covers/potus2_0.jpg?itok=jEIslQZ1" class="orbit" style="--i: 43">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/68/Joe_Biden_presidential_portrait.jpg" class="orbit" style="--i: 44">
         
     </div>  
     <section id="project">
