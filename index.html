@@ -40,29 +40,37 @@
         a, a:visited, a:hover, a:active {
             color: #007BFF;
         }
-        .circle-container {
-            position: relative;
+        .square-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
             height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
+            pointer-events: none;
             }
 
             .orbit {
             position: absolute;
             width: 50px;
-            transform: rotate(calc(var(--i) * 8deg)) translateX(200px);
-            animation: orbit-rotate 20s linear infinite;
+            animation: orbit-square 20s linear infinite;
+            animation-delay: calc(var(--i) * 20s / 44);
+            pointer-events: auto;
             }
 
-            @keyframes orbit-rotate {
-            from { transform: rotate(calc(var(--i) * 8deg)) translateX(200px) rotate(0deg); }
-            to { transform: rotate(calc(var(--i) * 8deg + 360deg)) translateX(200px) rotate(-360deg); }
+            @keyframes orbit-square {
+            0% { transform: translateX(0px) translateY(-300px); }
+            25% { transform: translateX(300px) translateY(-300px); }
+            50% { transform: translateX(300px) translateY(300px); }
+            75% { transform: translateX(-300px) translateY(300px); }
+            100% { transform: translateX(-300px) translateY(-300px); }
             }
     </style>
 </head>
 <body style ="background-image:url('https://t4.ftcdn.net/jpg/00/92/47/85/360_F_92478590_BbuqPZQDFPOOjIbhQajB3oq2z5cfsVZt.jpg');background-size:cover;background-repeat:no-repeat;display:flow-root;text-decoration:none;">
-    <div class="circle-container">
+    <div class="square-container">
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwsaZxuAgWICW7j4amn6I1UFIj0d8KKuxKtg&s" class="orbit" style="--i: 1">
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiHjaSc8X7fBvmDYPpRxdCaMy4cXwQfJuJSg&s" class="orbit" style="--i: 2">
         <img src="https://upload.wikimedia.org/wikipedia/commons/0/07/Official_Presidential_portrait_of_Thomas_Jefferson_%28by_Rembrandt_Peale%2C_1800%29.jpg" class="orbit" style="--i: 3">
