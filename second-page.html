@@ -27,6 +27,7 @@
             margin: 0 1rem;
         }
         section {
+            text-align: center;
             padding: 2rem;
             border-bottom: 1px solid #ddd;
         }
@@ -56,8 +57,22 @@
             text-decoration: none;
             font-size: 30px;
         }
+        .pulse{
+            animation: pulse 0.2s ease
+        }
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.09);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
         #status {
-            font-size:30;
+            font-size:30px;
             color: lightgreen;
         }
     </style>
@@ -74,6 +89,7 @@
 const scriptURL = "https://script.google.com/macros/s/AKfycbyremFCMmi5Qp9mmyL4NYewAxevx7uTFS25khuPMQjKKoFer7hVvJiO6QN8FWRNIyHU/exec";
 
 document.getElementById("submit").addEventListener("click", async () => {
+    const btn = document.getElementById("submit");
     const messageInput = document.getElementById("message");
     const status = document.getElementById("status");
 
@@ -81,8 +97,14 @@ document.getElementById("submit").addEventListener("click", async () => {
 
     if (!message) return;
 
+    btn.classList.add("pulse");
+
+    setTimeout(() => {
+        btn.classList.remove("flash");
+    }, 300);
+
     try {
-        await fetch(scriptURL, {
+        fetch(scriptURL, {
             method: "POST",
             mode: "no-cors",
             body: JSON.stringify({ message }),
