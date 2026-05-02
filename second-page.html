@@ -36,6 +36,16 @@
             background: #333;
             color: #fff;
         }
+        .corner-link {
+            position: fixed;
+            bottom: 10rem;
+            right: 10rem;
+            background: #fff;
+            padding: 3rem 6rem;
+            border-radius: 15px;
+            text-decoration: none;
+            font-size: 20px;
+        }
     </style>
 </head>
 <body>
@@ -43,7 +53,7 @@
     <section id="about">
         <h2>Review</h2>
             <input id ="message" type ="text" placeholder = "Feedback here">
-            <button id = "submit">Submit</button>
+            <button id = "submit" style="padding: 10rem;">Submit</button>
         <p id = "status"></p>
     </section>
 <script>
@@ -74,7 +84,9 @@ document.getElementById("submit").addEventListener("click", async () => {
         const result = await response.json();
 
         if (result.status === "success") {
+            message = "";
             messageInput.value = "";
+            status.textContent = "Submitted";
         }
 
     } catch (error) {
@@ -82,7 +94,7 @@ document.getElementById("submit").addEventListener("click", async () => {
     }
 });
 </script>
-
+    <a href = "index.html" class = "corner-link" style="text-align: center;">First Page</a>
 </body>
 
 </html>
