@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Webpage Title (will show on tab) -->
-    <title>Professional Portfolio</title>
+    <title>Review Page</title>
     <style>
         /* Basic styling for the page */
         body {
@@ -43,7 +43,7 @@
 
     <section id="about">
         <h2>Review</h2>
-            <input id ="message" type ="text" placeholder = "I mean if you want to leave a review">
+            <input id ="message" type ="text" placeholder = "Feedback here">
             <button id = "submit">Submit</button>
         <p id = "status"></p>
     </section>
@@ -55,6 +55,8 @@ document.getElementById("submit").addEventListener("click", async () => {
     const status = document.getElementById("status");
 
     const message = messageInput.value;
+    console.log("Button clicked");
+    console.log(message);
 
     if (!message) {
         return;
