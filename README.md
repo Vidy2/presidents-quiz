@@ -1,1 +1,1 @@
-This is a website that has links to all the different president quizzes I've made.
+This is a website that has links to all the different president quizzes I've made. If you want to do a presidents quiz, this site should have some.
